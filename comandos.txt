@@ -1,0 +1,7 @@
+bash -c "$(wget -qLO - https://github.com/getcifro/prova/raw/main/debian_auto.sh)"
+
+wget https://github.com/getcifro/prova/raw/main/debian_auto.sh
+
+chmod +x debian_auto.sh
+
+./debian_auto.sh
