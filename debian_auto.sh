@@ -87,3 +87,36 @@ echo -e "Professor: Tiago\n"
 echo -e "...................................\n"
 
 #timedatectl
+
+# This function sets color variables for formatting output in the terminal
+color() {
+  # Colors
+  YW=$(echo "\033[33m")
+  YWB=$(echo "\033[93m")
+  BL=$(echo "\033[36m")
+  RD=$(echo "\033[01;31m")
+  GN=$(echo "\033[1;92m")
+
+  # Formatting
+  CL=$(echo "\033[m")
+  BFR="\\r\\033[K"
+  BOLD=$(echo "\033[1m")
+  HOLD=" "
+  TAB="  "
+  TAB3="      "
+
+  # System
+  RETRY_NUM=10
+  RETRY_EVERY=3
+
+  # Icons
+  CM="${TAB}✔️${TAB}${CL}"
+  CROSS="${TAB}✖️${TAB}${CL}"
+  INFO="${TAB}💡${TAB}${CL}"
+  NETWORK="${TAB}📡${TAB}${CL}"
+  OS="${TAB}🖥️${TAB}${CL}"
+  OSVERSION="${TAB}🌟${TAB}${CL}"
+  HOSTNAME="${TAB}🏠${TAB}${CL}"
+  GATEWAY="${TAB}🌐${TAB}${CL}"
+  DEFAULT="${TAB}⚙️${TAB}${CL}"
+}
