@@ -74,7 +74,7 @@ echo -e "[1mProf°. Tiago[m"
 echo "echo \"\"" >>"$PROFILE_FILE"
 
 
-echo -e "echo -e \"📦  [m[33m Sistema: [1;92m${OS_NAME} [33m          | Versão: [1;92m${OS_VERSION}[m\"" >>"$PROFILE_FILE"
+echo -e "echo -e \"📦  [m[33m Sistema: [1;92mDebian [33m          | Versão: [1;92m12[m\"" >>"$PROFILE_FILE"
 echo -e "echo -e \"🆔  [m[33m Hostname : [1;92m$(hostname)[m\"" >>"$PROFILE_FILE"
 echo -e "echo -e \"🌐  [m[33m Endereço : [1;92m$(hostname -I | awk '{print $1}')[m\"" >>"$PROFILE_FILE"
 
