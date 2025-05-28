@@ -65,15 +65,18 @@ echo -e "\n"
 PROFILE_FILE="/etc/profile.d/00_lxc-details.sh"
 
 echo "echo -e \"\"" >"$PROFILE_FILE"
-echo -e "echo -e \"${BOLD}${APPLICATION} Debian virtalbox${CL}"\" >>"$PROFILE_FILE"
-echo -e "echo -e \"${BOLD}${APPLICATION} Ramon Silas${CL}"\" >>"$PROFILE_FILE"
-echo -e "echo -e \"${BOLD}${APPLICATION} SO para Redes Livres I${CL}"\" >>"$PROFILE_FILE"
-echo -e "echo -e \"${BOLD}${APPLICATION} Prof°. Tiago${CL}"\" >>"$PROFILE_FILE"
+
+echo -e "[1mDebian virtalbox[m" 
+echo -e "[1mRamon Silas[m" 
+echo -e "[1mSO para Redes Livres I[m" 
+echo -e "[1mProf°. Tiago[m" 
 
 echo "echo \"\"" >>"$PROFILE_FILE"
-echo -e "echo -e \"${TAB}${OS}${YW} OS: ${GN}${OS_NAME} - Version: ${OS_VERSION}${CL}\"" >>"$PROFILE_FILE"
-echo -e "echo -e \"${TAB}${HOSTNAME}${YW} Hostname: ${GN}\$(hostname)${CL}\"" >>"$PROFILE_FILE"
-echo -e "echo -e \"${TAB}${INFO}${YW} IP Address: ${GN}\$(hostname -I | awk '{print \$1}')${CL}\"" >>"$PROFILE_FILE"
+
+
+echo -e "echo -e \"📦  [m[33m Sistema: [1;92m${OS_NAME} [33m          | Versão: [1;92m${OS_VERSION}[m\"" >>"$PROFILE_FILE"
+echo -e "echo -e \"🆔  [m[33m Hostname : [1;92m$(hostname)[m\"" >>"$PROFILE_FILE"
+echo -e "echo -e \"🌐  [m[33m Endereço : [1;92m$(hostname -I | awk '{print $1}')[m\"" >>"$PROFILE_FILE"
 
 #Fim
 echo -e "...................................\n"
@@ -84,36 +87,3 @@ echo -e "Professor: Tiago\n"
 echo -e "...................................\n"
 
 #timedatectl
-
-# This function sets color variables for formatting output in the terminal
-color() {
-  # Colors
-  YW=$(echo "\033[33m")
-  YWB=$(echo "\033[93m")
-  BL=$(echo "\033[36m")
-  RD=$(echo "\033[01;31m")
-  GN=$(echo "\033[1;92m")
-
-  # Formatting
-  CL=$(echo "\033[m")
-  BFR="\\r\\033[K"
-  BOLD=$(echo "\033[1m")
-  HOLD=" "
-  TAB="  "
-  TAB3="      "
-
-  # System
-  RETRY_NUM=10
-  RETRY_EVERY=3
-
-  # Icons
-  CM="${TAB}✔️${TAB}${CL}"
-  CROSS="${TAB}✖️${TAB}${CL}"
-  INFO="${TAB}💡${TAB}${CL}"
-  NETWORK="${TAB}📡${TAB}${CL}"
-  OS="${TAB}🖥️${TAB}${CL}"
-  OSVERSION="${TAB}🌟${TAB}${CL}"
-  HOSTNAME="${TAB}🏠${TAB}${CL}"
-  GATEWAY="${TAB}🌐${TAB}${CL}"
-  DEFAULT="${TAB}⚙️${TAB}${CL}"
-}
